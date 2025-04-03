@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gradient-to-br from-[#2F3A46] to-[#4E5D6D] flex justify-center items-center min-h-screen">
+
+    <div class="glass-card text-center p-8 max-w-lg">
+        <h1 class="text-3xl font-bold text-white mb-4">Your Score</h1>
+        <p id="user-name" class="text-xl text-white font-semibold"></p>
+        <p id="final-score" class="text-2xl text-white font-semibold"></p>
+        <p id="feedback" class="text-lg text-white opacity-80 mt-2"></p>
+        
+        <div class="mt-6">
+            <a href="quiz.html"><button class="btn-3d bg-gradient-to-r from-[#B04C58] to-[#8B2F3D]">Retry</button></a>
+            <a href="index.html"><button class="btn-3d ml-4 bg-gradient-to-r from-[#FFFFFF] to-[#E6E6E6] text-[#2F3A46] hover:from-[#F2F2F2] hover:to-[#D6D6D6]">Home</button></a>
+        </div>
+    </div>
+
+    <script>
+        const user = localStorage.getItem("quizUser") || "Player";
+        const score = localStorage.getItem("quizScore") || 0;
+        document.getElementById("user-name").textContent = `Name: ${user}`;
+        document.getElementById("final-score").textContent = `You scored: ${score}/10`;
+        document.getElementById("feedback").textContent = score >= 7 ? "Great job!" : "Keep practicing!";
+    </script>
+</body>
+</html>

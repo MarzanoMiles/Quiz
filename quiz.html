@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeracy Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gradient-to-br from-[#2F3A46] to-[#4E5D6D] flex justify-center items-center min-h-screen">
+
+    <div class="glass-card p-6 w-full max-w-2xl">
+        <div class="flex justify-between text-white text-lg">
+            <span id="user-name"></span>
+            <span>Time Left: <span id="timer">30</span>s</span>
+        </div>
+        <h2 id="question-text" class="text-2xl font-bold text-white mt-4"></h2>
+        
+        <div id="answer-buttons" class="grid grid-cols-2 gap-4 mt-6"></div>
+
+        <button id="next-btn" class="btn-3d hidden mt-6">Next</button>
+    </div>
+
+    <script src="js/quiz.js"></script>
+</body>
+</html>
